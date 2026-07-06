@@ -581,6 +581,74 @@
     ]
   },
   {
+    "slug": "joys-vazir",
+    "group": "persian",
+    "css": "fonts/joys-vazir/joys-vazir.css",
+    "families": [
+      {
+        "family": "JoysVazir",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-vazir/woff2/joys-vazir-900.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-vazir",
+        "font_family": "JoysVazir",
+        "is_base": true
+      }
+    ]
+  },
+  {
     "slug": "joys-yekan-bakh",
     "group": "persian",
     "css": "fonts/joys-yekan-bakh/joys-yekan-bakh.css",
