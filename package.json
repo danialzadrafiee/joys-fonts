@@ -11,7 +11,7 @@
   "scripts": {
     "build": "node generate-manifest.js",
     "test": "node test/cli.test.js",
-    "deploy": "npm run build && git diff --quiet fonts.manifest.json || (git add fonts.manifest.json && git commit -m \"chore: regenerate fonts manifest\") && git push"
+    "deploy": "npm run build && git add . && (git diff --cached --quiet || git commit -m \"chore: update assets and manifest\") && git push"
   },
   "files": [
     "bin",
