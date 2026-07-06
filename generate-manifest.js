@@ -223,36 +223,27 @@ If you prefer to manually import the fonts or download them without using the CL
 @import url("https://danialzadrafiee.github.io/joys-fonts/fonts/<font-slug>/<font-slug>.css");
 \`\`\`
 
-For tailwind theme mapping or raw CSS rules, refer to the available fonts listing below.
+`;
 
----
+  llmText += `\n## Available Fonts Reference
 
-## Available Fonts Reference
+Pass the **Slug** to the CLI:
 
-Here is the complete catalog of available fonts. Pass the **Slug** to the CLI:
-
+| Slug | Group | Primary Tailwind Class | Additional Classes |
+| :--- | :--- | :--- | :--- |
 `;
 
   for (const font of manifest) {
-    llmText += `### ${font.slug} (${font.group} font)\n\n`;
-    llmText += `- **Slug**: \`${font.slug}\`\n`;
-    llmText += `- **Group**: \`${font.group}\`\n`;
-    llmText += `- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/${font.css}\n`;
-    
-    llmText += `- **Font Families**:\n`;
-    for (const family of font.families) {
-      const weightsStr = family.weights ? family.weights.join(', ') : (family.weight_range ? `${family.weight_range[0]}-${family.weight_range[1]} (Variable)` : 'N/A');
-      llmText += `  - \`${family.family}\` (Weights: ${weightsStr})\n`;
-    }
-    
-    if (font.classes && font.classes.length > 0) {
-      llmText += `- **Tailwind Utility Classes (after installation)**:\n`;
-      for (const cls of font.classes) {
-        llmText += `  - \`${cls.class}\` -> maps to \`font-family: "${cls.font_family}"\` ${cls.is_base ? '(Primary)' : ''}\n`;
-      }
-    }
-    llmText += `\n---\n\n`;
+    const primaryClass = font.classes.find(c => c.is_base)?.class || font.classes[0]?.class || '-';
+    const otherClasses = font.classes
+      .filter(c => c.class !== primaryClass)
+      .map(c => `\`${c.class}\``)
+      .join(', ') || '-';
+
+    llmText += `| \`${font.slug}\` | \`${font.group}\` | \`${primaryClass}\` | ${otherClasses} |\n`;
   }
+
+  llmText += `\n---\n`;
 
   llmText += `
 ## Instructions for AI Agents / LLMs

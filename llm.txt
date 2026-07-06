@@ -64,113 +64,22 @@ If you prefer to manually import the fonts or download them without using the CL
 @import url("https://danialzadrafiee.github.io/joys-fonts/fonts/<font-slug>/<font-slug>.css");
 ```
 
-For tailwind theme mapping or raw CSS rules, refer to the available fonts listing below.
-
----
 
 ## Available Fonts Reference
 
-Here is the complete catalog of available fonts. Pass the **Slug** to the CLI:
+Pass the **Slug** to the CLI:
 
-### joys-inter (english font)
-
-- **Slug**: `joys-inter`
-- **Group**: `english`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-inter/joys-inter.css
-- **Font Families**:
-  - `JoysInter` (Weights: 300, 400, 500, 600, 700, 800)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-inter` -> maps to `font-family: "JoysInter"` (Primary)
-
----
-
-### joys-iran-sans-x (persian font)
-
-- **Slug**: `joys-iran-sans-x`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-iran-sans-x/joys-iran-sans-x.css
-- **Font Families**:
-  - `JoysIranSansX` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-  - `JoysIranSansXFaNum` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-  - `JoysIranSansXNoEn` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-iran-sans-x` -> maps to `font-family: "JoysIranSansX"` (Primary)
-  - `font-iran-sans-x-fanum` -> maps to `font-family: "JoysIranSansXFaNum"` (Primary)
-  - `font-iran-sans-x-noen` -> maps to `font-family: "JoysIranSansXNoEn"` (Primary)
+| Slug | Group | Primary Tailwind Class | Additional Classes |
+| :--- | :--- | :--- | :--- |
+| `joys-inter` | `english` | `font-inter` | - |
+| `joys-iran-sans-x` | `persian` | `font-iran-sans-x` | `font-iran-sans-x-fanum`, `font-iran-sans-x-noen` |
+| `joys-iran-yekan-x` | `persian` | `font-iran-yekan-x` | - |
+| `joys-kalameh` | `persian` | `font-kalameh` | `font-kalameh-fanum`, `font-kalameh-noen` |
+| `joys-morabba` | `persian` | `font-morabba` | `font-morabba-fa-numerals`, `font-morabba-tabular-numerals` |
+| `joys-vazir` | `persian` | `font-vazir` | - |
+| `joys-yekan-bakh` | `persian` | `font-yekan-bakh` | `font-yekan-bakh-fanum`, `font-yekan-bakh-noen`, `font-yekan-bakh--dots-alt` |
 
 ---
-
-### joys-iran-yekan-x (persian font)
-
-- **Slug**: `joys-iran-yekan-x`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-iran-yekan-x/joys-iran-yekan-x.css
-- **Font Families**:
-  - `JoysIranYekanX` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-iran-yekan-x` -> maps to `font-family: "JoysIranYekanX"` (Primary)
-
----
-
-### joys-kalameh (persian font)
-
-- **Slug**: `joys-kalameh`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-kalameh/joys-kalameh.css
-- **Font Families**:
-  - `JoysKalameh` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-  - `JoysKalamehFaNum` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-  - `JoysKalamehNoEn` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-kalameh` -> maps to `font-family: "JoysKalameh"` (Primary)
-  - `font-kalameh-fanum` -> maps to `font-family: "JoysKalamehFaNum"` (Primary)
-  - `font-kalameh-noen` -> maps to `font-family: "JoysKalamehNoEn"` (Primary)
-
----
-
-### joys-morabba (persian font)
-
-- **Slug**: `joys-morabba`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-morabba/joys-morabba.css
-- **Font Families**:
-  - `JoysMorabba` (Weights: 200, 300, 400, 500, 600, 700, 800, 900, 950)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-morabba` -> maps to `font-family: "JoysMorabba"` (Primary)
-  - `font-morabba-fa-numerals` -> maps to `font-family: "null"` 
-  - `font-morabba-tabular-numerals` -> maps to `font-family: "null"` 
-
----
-
-### joys-vazir (persian font)
-
-- **Slug**: `joys-vazir`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-vazir/joys-vazir.css
-- **Font Families**:
-  - `JoysVazir` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
-- **Tailwind Utility Classes (after installation)**:
-  - `font-vazir` -> maps to `font-family: "JoysVazir"` (Primary)
-
----
-
-### joys-yekan-bakh (persian font)
-
-- **Slug**: `joys-yekan-bakh`
-- **Group**: `persian`
-- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-yekan-bakh/joys-yekan-bakh.css
-- **Font Families**:
-  - `JoysYekanBakh` (Weights: 100-950 (Variable))
-  - `JoysYekanBakhFaNum` (Weights: 100-950 (Variable))
-  - `JoysYekanBakhNoEn` (Weights: 100-950 (Variable))
-- **Tailwind Utility Classes (after installation)**:
-  - `font-yekan-bakh` -> maps to `font-family: "JoysYekanBakh"` (Primary)
-  - `font-yekan-bakh-fanum` -> maps to `font-family: "JoysYekanBakhFaNum"` (Primary)
-  - `font-yekan-bakh-noen` -> maps to `font-family: "JoysYekanBakhNoEn"` (Primary)
-  - `font-yekan-bakh--dots-alt` -> maps to `font-family: "null"` 
-
----
-
 
 ## Instructions for AI Agents / LLMs
 
