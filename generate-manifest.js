@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 /**
- * اسکن پوشه‌ی fonts/ و تولید fonts.manifest.json
- * این فایل تنها منبع حقیقت (source of truth) برای index.html هست.
- * هر فونت جدیدی که طبق قواعد .AGENTS.md اضافه بشه، خودکار شناسایی میشه.
- * 
- * اجرا: node generate-manifest.js
+ * run: node generate-manifest.js
  */
 
 import fs from 'fs';
