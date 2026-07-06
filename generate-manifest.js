@@ -263,6 +263,25 @@ If a user asks you to install a font from Joys Fonts in their project:
   fs.writeFileSync('llm.txt', llmText, 'utf8');
   console.log('✅ llm.txt generated successfully.');
 
+  // Update README.md font list dynamically
+  const readmePath = 'README.md';
+  if (fs.existsSync(readmePath)) {
+    let readme = fs.readFileSync(readmePath, 'utf8');
+    const startTag = '<!-- FONTS_START -->';
+    const endTag = '<!-- FONTS_END -->';
+    const startIndex = readme.indexOf(startTag);
+    const endIndex = readme.indexOf(endTag);
+
+    if (startIndex !== -1 && endIndex !== -1) {
+      const before = readme.substring(0, startIndex + startTag.length);
+      const after = readme.substring(endIndex);
+      const fontListText = '\n' + manifest.map(f => `- \`${f.slug}\``).join('\n') + '\n';
+      readme = before + fontListText + after;
+      fs.writeFileSync(readmePath, readme, 'utf8');
+      console.log('✅ README.md font list updated dynamically.');
+    }
+  }
+
   if (skipped.length > 0) {
     console.log(`⚠️  Skipped (no CSS file found, not ready yet): ${skipped.join(', ')}`);
   }

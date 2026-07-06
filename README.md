@@ -86,11 +86,15 @@ When you run `npx joys-fonts add joys-iran-sans-x`, the CLI will:
 
 The following fonts are packaged and available for installation:
 
+<!-- FONTS_START -->
+- `joys-inter`
 - `joys-iran-sans-x`
 - `joys-iran-yekan-x`
 - `joys-kalameh`
 - `joys-morabba`
+- `joys-vazir`
 - `joys-yekan-bakh`
+<!-- FONTS_END -->
 
 ---
 
