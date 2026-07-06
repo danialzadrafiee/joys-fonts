@@ -138,8 +138,18 @@ function main() {
     const cssPath = path.join(fontDir, cssFiles[0]);
     const [families, classes] = parseCss(cssPath);
 
+    const PERSIAN_SLUGS = [
+      'joys-iran-sans-x',
+      'joys-iran-yekan-x',
+      'joys-kalameh',
+      'joys-morabba',
+      'joys-yekan-bakh'
+    ];
+    const group = PERSIAN_SLUGS.includes(slug) ? 'persian' : 'english';
+
     manifest.push({
       slug,
+      group,
       css: cssPath.replace(/\\/g, '/'),
       families,
       classes

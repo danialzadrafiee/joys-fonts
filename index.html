@@ -100,15 +100,23 @@
                 <!-- Global Control Panel (Interactive playground) -->
                 <div
                     class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-900/40 border border-slate-800 backdrop-blur-md p-6 rounded-2xl shadow-xl shadow-black/10">
-                    <div class="md:col-span-2 flex flex-col gap-2">
-                        <label for="custom-text"
-                            class="text-xs font-bold text-slate-400 uppercase tracking-wider">Custom Preview
-                            Text</label>
-                        <input type="text" id="custom-text"
-                            class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
-                            dir="rtl" value="عشق ورزیدن به فونت‌های زیبا، لذتی وصف‌ناپذیر است. :) - Joys Fonts">
+                    <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label for="custom-text-fa"
+                                class="text-xs font-bold text-slate-400 uppercase tracking-wider">Persian Preview</label>
+                            <input type="text" id="custom-text-fa"
+                                class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
+                                dir="rtl" value="عشق ورزیدن به فونتهای زیبا، لذتی وصفناپذیر است. :)">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="custom-text-en"
+                                class="text-xs font-bold text-slate-400 uppercase tracking-wider">English Preview</label>
+                            <input type="text" id="custom-text-en"
+                                class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-sans"
+                                dir="ltr" value="Loving beautiful fonts is an indescribable pleasure. :) - Joys Fonts">
+                        </div>
                     </div>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 justify-end">
                         <label for="global-size" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Font
                             Size</label>
                         <div
@@ -129,10 +137,19 @@
                             class="w-full bg-slate-900/50 border border-slate-800/80 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl py-2 px-4 pl-10 text-sm text-slate-100">
                     </div>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex bg-slate-900/60 border border-slate-800 p-1 rounded-xl">
+                            <button id="group-all"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition">All Groups</button>
+                            <button id="group-persian"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">Persian</button>
+                            <button id="group-english"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">English</button>
+                        </div>
+
                         <div class="flex bg-slate-900/60 border border-slate-800 p-1 rounded-xl">
                             <button id="filter-all"
-                                class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition">All</button>
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition">All Formats</button>
                             <button id="filter-variable"
                                 class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">Variable</button>
                             <button id="filter-static"
@@ -267,11 +284,19 @@
                     <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Live Font Specimen</h3>
 
                     <!-- Specimen Text Area -->
-                    <div class="space-y-2">
-                        <label for="modal-input-text" class="text-xs text-slate-400">Specimen Preview Text</label>
-                        <input type="text" id="modal-input-text"
-                            class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
-                            dir="rtl">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label for="modal-input-text-fa" class="text-xs text-slate-400">Persian Preview Text</label>
+                            <input type="text" id="modal-input-text-fa"
+                                class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
+                                dir="rtl">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="modal-input-text-en" class="text-xs text-slate-400">English Preview Text</label>
+                            <input type="text" id="modal-input-text-en"
+                                class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-sans"
+                                dir="ltr">
+                        </div>
                     </div>
 
                     <!-- Size & Axis Sliders -->
@@ -292,15 +317,16 @@
 
                     <div id="modal-stretch-slider-group" class="space-y-2 hidden">
                         <label for="modal-input-stretch" class="text-xs text-slate-400">Width (wdth): <span
-                                id="modal-stretch-val" class="font-mono font-bold text-brand-400">100%</span></label>
+                                    id="modal-stretch-val" class="font-mono font-bold text-brand-400">100%</span></label>
                         <input type="range" id="modal-input-stretch" min="50" max="150" value="100"
-                            class="w-full accent-brand-500 cursor-pointer">
+                                class="w-full accent-brand-500 cursor-pointer">
                     </div>
 
                     <!-- Visual Test Render Box -->
                     <div
-                        class="bg-slate-950 border border-slate-850 p-6 rounded-xl overflow-hidden min-h-[140px] flex items-center justify-end">
-                        <div id="modal-preview-render" class="sample-display w-full"></div>
+                        class="bg-slate-950 border border-slate-850 p-6 rounded-xl overflow-hidden min-h-[140px] flex flex-col justify-center gap-4">
+                        <div id="modal-preview-render-fa" class="sample-display w-full text-right" dir="rtl"></div>
+                        <div id="modal-preview-render-en" class="sample-display w-full text-left" dir="ltr"></div>
                     </div>
 
                     <!-- Stylistic Sets Section -->
@@ -309,8 +335,9 @@
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">OpenType
                             Features</span>
                         <div id="modal-features-checkboxes" class="flex flex-wrap gap-4"></div>
-                        <div class="bg-slate-950 border border-slate-900 p-4 rounded-lg flex justify-end mt-2">
-                            <div id="modal-features-preview" class="sample-display w-full"></div>
+                        <div class="bg-slate-950 border border-slate-900 p-4 rounded-lg flex flex-col gap-4 mt-2">
+                            <div id="modal-features-preview-fa" class="sample-display w-full text-right" dir="rtl"></div>
+                            <div id="modal-features-preview-en" class="sample-display w-full text-left" dir="ltr"></div>
                         </div>
                     </div>
 
@@ -421,8 +448,10 @@
             currentTab: 'fonts',
             activeFont: null,
             filterType: 'all',
+            filterGroup: 'all',
             searchQuery: '',
-            globalText: document.getElementById('custom-text').value,
+            globalTextFa: document.getElementById('custom-text-fa').value,
+            globalTextEn: document.getElementById('custom-text-en').value,
             globalSize: parseInt(document.getElementById('global-size').value, 10),
             manifest: [],
             activeModalInstallTab: 'modal-pnpm',
@@ -432,7 +461,8 @@
 
         const appRoot = document.getElementById("font-grid");
         const statusText = document.getElementById("status-text");
-        const customTextEl = document.getElementById("custom-text");
+        const customTextFaEl = document.getElementById("custom-text-fa");
+        const customTextEnEl = document.getElementById("custom-text-en");
         const globalSizeEl = document.getElementById("global-size");
         const globalSizeVal = document.getElementById("global-size-val");
         const searchInput = document.getElementById("search-input");
@@ -446,10 +476,12 @@
         const modalClose = document.getElementById("modal-close");
         const modalFontTitle = document.getElementById("modal-font-title");
         const modalFontSlug = document.getElementById("modal-font-slug");
-        const modalInputText = document.getElementById("modal-input-text");
+        const modalInputTextFa = document.getElementById("modal-input-text-fa");
+        const modalInputTextEn = document.getElementById("modal-input-text-en");
         const modalInputSize = document.getElementById("modal-input-size");
         const modalSizeVal = document.getElementById("modal-size-val");
-        const modalPreviewRender = document.getElementById("modal-preview-render");
+        const modalPreviewRenderFa = document.getElementById("modal-preview-render-fa");
+        const modalPreviewRenderEn = document.getElementById("modal-preview-render-en");
         const modalWeightsList = document.getElementById("modal-weights-list");
 
         const modalWeightSliderGroup = document.getElementById("modal-weight-slider-group");
@@ -462,7 +494,8 @@
 
         const modalFeaturesGroup = document.getElementById("modal-features-group");
         const modalFeaturesCheckboxes = document.getElementById("modal-features-checkboxes");
-        const modalFeaturesPreview = document.getElementById("modal-features-preview");
+        const modalFeaturesPreviewFa = document.getElementById("modal-features-preview-fa");
+        const modalFeaturesPreviewEn = document.getElementById("modal-features-preview-en");
 
         // Helper to load stylesheet relative to index.html
         function loadFontStylesheet(cssUrl) {
@@ -804,15 +837,31 @@ module.exports = {
             card.dataset.search = (entry.slug + " " + entry.families.map(f => f.family).join(" ")).toLowerCase();
 
             // Store references to update in real time
-            const textDisplay = document.createElement("div");
-            textDisplay.className = "sample-display flex-grow text-slate-100 font-fa self-end py-4";
-            textDisplay.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
-            textDisplay.style.fontSize = `${state.globalSize}px`;
-            textDisplay.textContent = state.globalText;
+            const previewContainer = document.createElement("div");
+            previewContainer.className = "flex-grow flex flex-col justify-end gap-2.5 py-4 overflow-hidden";
 
-            card.updatePreview = (text, size) => {
-                textDisplay.textContent = text;
-                textDisplay.style.fontSize = `${size}px`;
+            const textDisplayFa = document.createElement("div");
+            textDisplayFa.className = "sample-display text-slate-100 font-fa text-right w-full truncate";
+            textDisplayFa.dir = "rtl";
+            textDisplayFa.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+            textDisplayFa.style.fontSize = `${state.globalSize}px`;
+            textDisplayFa.textContent = state.globalTextFa;
+
+            const textDisplayEn = document.createElement("div");
+            textDisplayEn.className = "sample-display text-slate-400 font-sans text-left w-full truncate";
+            textDisplayEn.dir = "ltr";
+            textDisplayEn.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+            textDisplayEn.style.fontSize = `${state.globalSize * 0.85}px`;
+            textDisplayEn.textContent = state.globalTextEn;
+
+            previewContainer.appendChild(textDisplayFa);
+            previewContainer.appendChild(textDisplayEn);
+
+            card.updatePreview = (textFa, textEn, size) => {
+                textDisplayFa.textContent = textFa;
+                textDisplayFa.style.fontSize = `${size}px`;
+                textDisplayEn.textContent = textEn;
+                textDisplayEn.style.fontSize = `${size * 0.85}px`;
             };
 
             const header = document.createElement("div");
@@ -839,7 +888,7 @@ module.exports = {
             header.appendChild(typeBadge);
             card.appendChild(header);
 
-            card.appendChild(textDisplay);
+            card.appendChild(previewContainer);
 
             const footer = document.createElement("div");
             footer.className = "flex items-center justify-between w-full border-t border-slate-800/40 pt-3 text-[11px] text-slate-500";

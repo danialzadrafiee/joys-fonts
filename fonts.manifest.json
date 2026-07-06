@@ -1,6 +1,60 @@
 [
   {
+    "slug": "joys-inter",
+    "group": "english",
+    "css": "fonts/joys-inter/joys-inter.css",
+    "families": [
+      {
+        "family": "JoysInter",
+        "weights": [
+          300,
+          400,
+          500,
+          600,
+          700,
+          800
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "300",
+            "url": "fonts/joys-inter/woff2/joys-inter-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-inter/woff2/joys-inter-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-inter/woff2/joys-inter-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-inter/woff2/joys-inter-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-inter/woff2/joys-inter-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-inter/woff2/joys-inter-800.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-inter",
+        "font_family": "JoysInter",
+        "is_base": true
+      }
+    ]
+  },
+  {
     "slug": "joys-iran-sans-x",
+    "group": "persian",
     "css": "fonts/joys-iran-sans-x/joys-iran-sans-x.css",
     "families": [
       {
@@ -186,6 +240,7 @@
   },
   {
     "slug": "joys-iran-yekan-x",
+    "group": "persian",
     "css": "fonts/joys-iran-yekan-x/joys-iran-yekan-x.css",
     "families": [
       {
@@ -263,6 +318,7 @@
   },
   {
     "slug": "joys-kalameh",
+    "group": "persian",
     "css": "fonts/joys-kalameh/joys-kalameh.css",
     "families": [
       {
@@ -448,6 +504,7 @@
   },
   {
     "slug": "joys-morabba",
+    "group": "persian",
     "css": "fonts/joys-morabba/joys-morabba.css",
     "families": [
       {
@@ -525,6 +582,7 @@
   },
   {
     "slug": "joys-yekan-bakh",
+    "group": "persian",
     "css": "fonts/joys-yekan-bakh/joys-yekan-bakh.css",
     "families": [
       {
