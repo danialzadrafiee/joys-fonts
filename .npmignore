@@ -1,0 +1,7 @@
+generate-manifest.js
+index.html
+.AGENTS.md
+check_axes.py
+test-project/
+.git/
+.github/

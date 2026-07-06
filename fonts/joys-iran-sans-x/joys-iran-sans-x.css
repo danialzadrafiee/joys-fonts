@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansX';
+    src: url('./woff2/joys-iran-sans-x-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXFaNum';
+    src: url('./woff2/joys-iran-sans-x-fanum-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysIranSansXNoEn';
+    src: url('./woff2/joys-iran-sans-x-noen-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+.font-iran-sans-x {
+    font-family: 'JoysIranSansX', sans-serif;
+    font-weight: 400;
+}
+.font-iran-sans-x-fanum {
+    font-family: 'JoysIranSansXFaNum', sans-serif;
+    font-weight: 400;
+}
+.font-iran-sans-x-noen {
+    font-family: 'JoysIranSansXNoEn', sans-serif;
+    font-weight: 400;
+}

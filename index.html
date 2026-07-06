@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joys Fonts — Live Persian Fonts Specimen & Installer</title>
+    <meta name="description"
+        content="Live catalog and installer for Persian web fonts optimized for Tailwind CSS. Install Vazirmatn, Iran Sans, Yekan Bakh, and more.">
+
+    <!-- Google Fonts: Inter for UI, Vazirmatn for Persian text previews -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#0b0f19',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        fa: ['Vazirmatn', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-950 text-slate-100 min-h-screen selection:bg-brand-500/30 selection:text-brand-200">
+
+    <!-- Background Glow Effects -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="absolute -top-[40%] -left-[20%] w-[80%] h-[80%] rounded-full bg-brand-500/10 blur-[120px]"></div>
+        <div class="absolute -bottom-[40%] -right-[20%] w-[80%] h-[80%] rounded-full bg-emerald-500/5 blur-[120px]">
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col min-h-screen">
+
+        <!-- Navigation Header -->
+        <header class="flex items-center justify-between border-b border-slate-800 pb-6 mb-8 flex-wrap gap-4">
+            <div class="flex items-center gap-3">
+                <span
+                    class="text-2xl font-extrabold bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent tracking-tight">
+                    Joys Fonts
+                </span>
+                <span
+                    class="bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs px-2.5 py-0.5 rounded-full font-semibold">
+                    Tailwind Ready
+                </span>
+            </div>
+
+            <nav class="flex items-center gap-1 sm:gap-2">
+                <button id="tab-fonts"
+                    class="px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white shadow-lg shadow-brand-600/20 hover:bg-brand-500 transition duration-200">
+                    Fonts Directory
+                </button>
+                <button id="tab-docs"
+                    class="px-4 py-2 text-sm font-semibold rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-900 transition duration-200">
+                    CLI Reference
+                </button>
+                <a href="https://github.com/joys/joys-fonts" target="_blank" rel="noopener"
+                    class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-900 transition duration-200">
+                    GitHub
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow">
+
+            <!-- SECTION 1: FONTS CATALOGUE -->
+            <section id="section-fonts" class="space-y-8">
+
+                <!-- Global Control Panel (Interactive playground) -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-900/40 border border-slate-800 backdrop-blur-md p-6 rounded-2xl shadow-xl shadow-black/10">
+                    <div class="md:col-span-2 flex flex-col gap-2">
+                        <label for="custom-text"
+                            class="text-xs font-bold text-slate-400 uppercase tracking-wider">Custom Preview
+                            Text</label>
+                        <input type="text" id="custom-text"
+                            class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
+                            dir="rtl" value="عشق ورزیدن به فونت‌های زیبا، لذتی وصف‌ناپذیر است. :) - Joys Fonts">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="global-size" class="text-xs font-bold text-slate-400 uppercase tracking-wider">Font
+                            Size</label>
+                        <div
+                            class="flex items-center gap-4 bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5">
+                            <input type="range" id="global-size" min="16" max="72" value="26"
+                                class="flex-grow accent-brand-500 cursor-pointer">
+                            <span id="global-size-val"
+                                class="text-xs font-extrabold text-brand-400 font-mono w-10 text-right">26px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar & Filters -->
+                <div class="flex items-center justify-between gap-4 flex-wrap border-b border-slate-800/60 pb-6">
+                    <div class="relative flex-grow max-w-md">
+                        <span class="absolute left-3.5 top-1/2 -translate-y-1/2 opacity-50">🔍</span>
+                        <input type="text" id="search-input" placeholder="Search fonts by name or slug..."
+                            class="w-full bg-slate-900/50 border border-slate-800/80 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl py-2 px-4 pl-10 text-sm text-slate-100">
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex bg-slate-900/60 border border-slate-800 p-1 rounded-xl">
+                            <button id="filter-all"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition">All</button>
+                            <button id="filter-variable"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">Variable</button>
+                            <button id="filter-static"
+                                class="px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition">Static</button>
+                        </div>
+
+                        <div
+                            class="hidden sm:inline-flex items-center gap-2 bg-slate-900/40 border border-slate-800/80 px-3 py-1.5 rounded-lg text-xs text-slate-400">
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span id="status-text">Loading catalog...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Font Specimen Grid -->
+                <div id="font-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+            </section>
+
+            <!-- SECTION 2: CLI REFERENCE -->
+            <section id="section-docs" class="hidden max-w-4xl mx-auto space-y-8">
+
+                <div class="space-y-4">
+                    <h2 class="text-3xl font-extrabold tracking-tight">CLI Installation Guide</h2>
+                    <p class="text-slate-400">Joys Fonts provides an easy-to-use CLI to download optimized font files
+                        and configure Tailwind CSS automatically without adding bundle size to your project.</p>
+                </div>
+
+                <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-6">
+                    <h3 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                        <span class="text-brand-400">⚡</span> Quick Start
+                    </h3>
+
+                    <p class="text-sm text-slate-300">Run the command below in the root of your project using your
+                        preferred package manager:</p>
+
+                    <!-- Code box for package manager commands -->
+                    <div class="space-y-3">
+                        <div class="flex border-b border-slate-800">
+                            <button onclick="toggleDocTab('doc-pnpm')" id="btn-doc-pnpm"
+                                class="px-4 py-2 text-xs font-bold border-b-2 border-brand-500 text-brand-400">pnpm</button>
+                            <button onclick="toggleDocTab('doc-npm')" id="btn-doc-npm"
+                                class="px-4 py-2 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">npm</button>
+                            <button onclick="toggleDocTab('doc-yarn')" id="btn-doc-yarn"
+                                class="px-4 py-2 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">yarn</button>
+                            <button onclick="toggleDocTab('doc-bun')" id="btn-doc-bun"
+                                class="px-4 py-2 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">bun</button>
+                        </div>
+
+                        <div class="relative bg-slate-950 border border-slate-850 p-4 rounded-xl font-mono text-sm">
+                            <div id="code-doc-pnpm" class="doc-code-block block text-emerald-400">pnpm dlx joys-fonts
+                                add joys-vazir</div>
+                            <div id="code-doc-npm" class="doc-code-block hidden text-emerald-400">npx joys-fonts add
+                                joys-vazir</div>
+                            <div id="code-doc-yarn" class="doc-code-block hidden text-emerald-400">yarn dlx joys-fonts
+                                add joys-vazir</div>
+                            <div id="code-doc-bun" class="doc-code-block hidden text-emerald-400">bunx joys-fonts add
+                                joys-vazir</div>
+
+                            <button onclick="copyDocCommand()"
+                                class="absolute right-3 top-3 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs px-2.5 py-1.5 rounded-lg active:scale-95 transition">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-4">
+                        <h3 class="text-md font-bold text-slate-100">CLI Commands</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li><code class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">add &lt;slug&gt;</code>:
+                                Downloads assets and configures the font in your project.</li>
+                            <li><code class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">list, ls</code>: Lists all
+                                available fonts in the catalog.</li>
+                            <li><code class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">help, -h</code>: Displays
+                                the help screen.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-4">
+                        <h3 class="text-md font-bold text-slate-100">Configuration Options</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li><code
+                                    class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">-d, --dest &lt;path&gt;</code>:
+                                Customize the directory to store font assets.</li>
+                            <li><code
+                                    class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">-c, --css &lt;path&gt;</code>:
+                                Path of the stylesheet to inject configuration.</li>
+                            <li><code class="text-brand-300 bg-slate-950 px-2 py-0.5 rounded">-y, --yes</code>: Runs the
+                                installer non-interactively using defaults.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-20 border-t border-slate-800/80 pt-6 text-center text-xs text-slate-500">
+            <p>Joys Fonts Open Source Repository. Released under the MIT License.</p>
+        </footer>
+
+    </div>
+
+    <!-- MAIN SPECIMEN & INSTALLER MODAL -->
+    <div id="font-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 ease-out">
+        <div
+            class="relative bg-slate-900 border border-slate-800 max-w-5xl w-full max-h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden transform scale-95 transition-all duration-300">
+
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between border-b border-slate-800 p-6 flex-wrap gap-4">
+                <div class="flex flex-col">
+                    <h2 id="modal-font-title" class="text-2xl font-bold text-slate-100">Font Name</h2>
+                    <span id="modal-font-slug"
+                        class="font-mono text-xs text-slate-400 bg-slate-950/60 px-2 py-0.5 rounded mt-1 w-fit">joys-font-name</span>
+                </div>
+
+                <button id="modal-close"
+                    class="text-slate-400 hover:text-slate-100 text-3xl font-light hover:rotate-90 transition duration-200">
+                    &times;
+                </button>
+            </div>
+
+            <!-- Modal Content (Scrollable Grid) -->
+            <div class="flex-grow overflow-y-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Left Column: Interactive Font Specimen -->
+                <div class="space-y-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Live Font Specimen</h3>
+
+                    <!-- Specimen Text Area -->
+                    <div class="space-y-2">
+                        <label for="modal-input-text" class="text-xs text-slate-400">Specimen Preview Text</label>
+                        <input type="text" id="modal-input-text"
+                            class="w-full bg-slate-950/80 border border-slate-800 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 font-fa"
+                            dir="rtl">
+                    </div>
+
+                    <!-- Size & Axis Sliders -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label for="modal-input-size" class="text-xs text-slate-400">Font Size: <span
+                                    id="modal-size-val" class="font-mono font-bold text-brand-400">28px</span></label>
+                            <input type="range" id="modal-input-size" min="16" max="96" value="28"
+                                class="w-full accent-brand-500 cursor-pointer">
+                        </div>
+                        <div id="modal-weight-slider-group" class="space-y-2">
+                            <label for="modal-input-weight" class="text-xs text-slate-400">Weight (wght): <span
+                                    id="modal-weight-val" class="font-mono font-bold text-brand-400">400</span></label>
+                            <input type="range" id="modal-input-weight" min="100" max="900" value="400"
+                                class="w-full accent-brand-500 cursor-pointer">
+                        </div>
+                    </div>
+
+                    <div id="modal-stretch-slider-group" class="space-y-2 hidden">
+                        <label for="modal-input-stretch" class="text-xs text-slate-400">Width (wdth): <span
+                                id="modal-stretch-val" class="font-mono font-bold text-brand-400">100%</span></label>
+                        <input type="range" id="modal-input-stretch" min="50" max="150" value="100"
+                            class="w-full accent-brand-500 cursor-pointer">
+                    </div>
+
+                    <!-- Visual Test Render Box -->
+                    <div
+                        class="bg-slate-950 border border-slate-850 p-6 rounded-xl overflow-hidden min-h-[140px] flex items-center justify-end">
+                        <div id="modal-preview-render" class="sample-display w-full"></div>
+                    </div>
+
+                    <!-- Stylistic Sets Section -->
+                    <div id="modal-features-group"
+                        class="bg-slate-950/60 border border-slate-850 p-4 rounded-xl space-y-3 hidden">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">OpenType
+                            Features</span>
+                        <div id="modal-features-checkboxes" class="flex flex-wrap gap-4"></div>
+                        <div class="bg-slate-950 border border-slate-900 p-4 rounded-lg flex justify-end mt-2">
+                            <div id="modal-features-preview" class="sample-display w-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Weight Steps (Static weights or intervals) -->
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Available
+                            Weights</span>
+                        <div id="modal-weights-list" class="space-y-3 border-t border-slate-800/60 pt-3"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Developer Guide -->
+                <div class="space-y-6 lg:border-l lg:border-slate-800 lg:pl-8">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Installation & Configuration
+                    </h3>
+
+                    <!-- Step 1: Download command -->
+                    <div class="space-y-3">
+                        <div class="text-sm font-semibold text-slate-200">1. Download Font Assets</div>
+                        <div class="flex border-b border-slate-800">
+                            <button onclick="toggleModalInstallTab('modal-pnpm')" id="btn-modal-pnpm"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400">pnpm</button>
+                            <button onclick="toggleModalInstallTab('modal-npm')" id="btn-modal-npm"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">npm</button>
+                            <button onclick="toggleModalInstallTab('modal-yarn')" id="btn-modal-yarn"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">yarn</button>
+                            <button onclick="toggleModalInstallTab('modal-bun')" id="btn-modal-bun"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">bun</button>
+                        </div>
+
+                        <div class="relative bg-slate-950 border border-slate-850 p-4 rounded-xl font-mono text-xs">
+                            <div id="code-modal-pnpm" class="modal-code-block block text-emerald-400">pnpm dlx
+                                joys-fonts add joys-iran-sans-x</div>
+                            <div id="code-modal-npm" class="modal-code-block hidden text-emerald-400">npx joys-fonts add
+                                joys-iran-sans-x</div>
+                            <div id="code-modal-yarn" class="modal-code-block hidden text-emerald-400">yarn dlx
+                                joys-fonts add joys-iran-sans-x</div>
+                            <div id="code-modal-bun" class="modal-code-block hidden text-emerald-400">bunx joys-fonts
+                                add joys-iran-sans-x</div>
+
+                            <button onclick="copyModalInstallCommand()"
+                                class="absolute right-3 top-3 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded-lg active:scale-95 transition">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Configure in CSS / Config -->
+                    <div class="space-y-3">
+                        <div class="text-sm font-semibold text-slate-200">2. Configure Tailwind CSS</div>
+                        <div class="flex border-b border-slate-800">
+                            <button onclick="toggleModalConfigTab('config-v4')" id="btn-config-v4"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400">Tailwind
+                                CSS v4</button>
+                            <button onclick="toggleModalConfigTab('config-v3')" id="btn-config-v3"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">Tailwind
+                                CSS v3</button>
+                            <button onclick="toggleModalConfigTab('config-css')" id="btn-config-css"
+                                class="px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200">Plain
+                                CSS</button>
+                        </div>
+
+                        <!-- Tailwind CSS v4 instruction block -->
+                        <div id="code-config-v4" class="modal-config-block block space-y-2">
+                            <p class="text-xs text-slate-400">Add the import and CSS variables inside your global
+                                stylesheet:</p>
+                            <div class="relative bg-slate-950 border border-slate-850 p-4 rounded-xl font-mono text-[11px] leading-normal text-brand-300 overflow-x-auto whitespace-pre"
+                                id="text-config-v4"></div>
+                            <button onclick="copyConfigCode('text-config-v4')"
+                                class="bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg active:scale-95 transition w-fit">
+                                Copy Code
+                            </button>
+                        </div>
+
+                        <!-- Tailwind CSS v3 instruction block -->
+                        <div id="code-config-v3" class="modal-config-block hidden space-y-2">
+                            <p class="text-xs text-slate-400">Import the CSS in your stylesheet and extend your config
+                                file:</p>
+                            <div class="relative bg-slate-950 border border-slate-850 p-4 rounded-xl font-mono text-[11px] leading-normal text-brand-300 overflow-x-auto whitespace-pre"
+                                id="text-config-v3"></div>
+                            <button onclick="copyConfigCode('text-config-v3')"
+                                class="bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg active:scale-95 transition w-fit">
+                                Copy Code
+                            </button>
+                        </div>
+
+                        <!-- Plain CSS instruction block -->
+                        <div id="code-config-css" class="modal-config-block hidden space-y-2">
+                            <p class="text-xs text-slate-400">Import the CSS directly into your stylesheet:</p>
+                            <div class="relative bg-slate-950 border border-slate-850 p-4 rounded-xl font-mono text-[11px] leading-normal text-brand-300 overflow-x-auto whitespace-pre"
+                                id="text-config-css"></div>
+                            <button onclick="copyConfigCode('text-config-css')"
+                                class="bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg active:scale-95 transition w-fit">
+                                Copy Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Client-Side State & Logic Manager -->
+    <script>
+        const state = {
+            currentTab: 'fonts',
+            activeFont: null,
+            filterType: 'all',
+            searchQuery: '',
+            globalText: document.getElementById('custom-text').value,
+            globalSize: parseInt(document.getElementById('global-size').value, 10),
+            manifest: [],
+            activeModalInstallTab: 'modal-pnpm',
+            activeModalConfigTab: 'config-v4',
+            activeDocTab: 'doc-pnpm'
+        };
+
+        const appRoot = document.getElementById("font-grid");
+        const statusText = document.getElementById("status-text");
+        const customTextEl = document.getElementById("custom-text");
+        const globalSizeEl = document.getElementById("global-size");
+        const globalSizeVal = document.getElementById("global-size-val");
+        const searchInput = document.getElementById("search-input");
+
+        const tabFonts = document.getElementById("tab-fonts");
+        const tabDocs = document.getElementById("tab-docs");
+        const sectionFonts = document.getElementById("section-fonts");
+        const sectionDocs = document.getElementById("section-docs");
+
+        const fontModal = document.getElementById("font-modal");
+        const modalClose = document.getElementById("modal-close");
+        const modalFontTitle = document.getElementById("modal-font-title");
+        const modalFontSlug = document.getElementById("modal-font-slug");
+        const modalInputText = document.getElementById("modal-input-text");
+        const modalInputSize = document.getElementById("modal-input-size");
+        const modalSizeVal = document.getElementById("modal-size-val");
+        const modalPreviewRender = document.getElementById("modal-preview-render");
+        const modalWeightsList = document.getElementById("modal-weights-list");
+
+        const modalWeightSliderGroup = document.getElementById("modal-weight-slider-group");
+        const modalInputWeight = document.getElementById("modal-input-weight");
+        const modalWeightVal = document.getElementById("modal-weight-val");
+
+        const modalStretchSliderGroup = document.getElementById("modal-stretch-slider-group");
+        const modalInputStretch = document.getElementById("modal-input-stretch");
+        const modalStretchVal = document.getElementById("modal-stretch-val");
+
+        const modalFeaturesGroup = document.getElementById("modal-features-group");
+        const modalFeaturesCheckboxes = document.getElementById("modal-features-checkboxes");
+        const modalFeaturesPreview = document.getElementById("modal-features-preview");
+
+        // Helper to load stylesheet relative to index.html
+        function loadFontStylesheet(cssUrl) {
+            if (document.querySelector(`link[href="${cssUrl}"]`)) return;
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = cssUrl;
+            document.head.appendChild(link);
+        }
+
+        // Clean titles for card display
+        function getFontTitle(slug) {
+            return slug
+                .replace(/^joys-/, "")
+                .split("-")
+                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                .join(" ");
+        }
+
+        // Check if any variant is variable
+        function isVariableFont(entry) {
+            return entry.families.some(f => f.weight_range !== null);
+        }
+
+        // Handle navigation tabs
+        function switchTab(tab) {
+            state.currentTab = tab;
+            if (tab === 'fonts') {
+                tabFonts.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white shadow-lg shadow-brand-600/20 hover:bg-brand-500 transition duration-200";
+                tabDocs.className = "px-4 py-2 text-sm font-semibold rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-900 transition duration-200";
+                sectionFonts.classList.remove("hidden");
+                sectionDocs.classList.add("hidden");
+            } else {
+                tabDocs.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-brand-600 text-white shadow-lg shadow-brand-600/20 hover:bg-brand-500 transition duration-200";
+                tabFonts.className = "px-4 py-2 text-sm font-semibold rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-900 transition duration-200";
+                sectionDocs.classList.remove("hidden");
+                sectionFonts.classList.add("hidden");
+            }
+        }
+
+        tabFonts.addEventListener("click", () => switchTab('fonts'));
+        tabDocs.addEventListener("click", () => switchTab('docs'));
+
+        // Toggle installation subtabs on general docs page
+        window.toggleDocTab = function (tabId) {
+            state.activeDocTab = tabId;
+            document.querySelectorAll(".doc-code-block").forEach(b => b.classList.add("hidden"));
+            document.getElementById(`code-${tabId}`).classList.remove("hidden");
+
+            const managers = ['pnpm', 'npm', 'yarn', 'bun'];
+            managers.forEach(m => {
+                const btn = document.getElementById(`btn-doc-${m}`);
+                if (`doc-${m}` === tabId) {
+                    btn.className = "px-4 py-2 text-xs font-bold border-b-2 border-brand-500 text-brand-400";
+                } else {
+                    btn.className = "px-4 py-2 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200";
+                }
+            });
+        };
+
+        window.copyDocCommand = async function () {
+            const commandText = document.querySelector(`.doc-code-block:not(.hidden)`).textContent;
+            await navigator.clipboard.writeText(commandText);
+        };
+
+        // Open detailed specimens modal
+        function openFontModal(entry) {
+            state.activeFont = entry;
+            loadFontStylesheet(entry.css);
+
+            modalFontTitle.textContent = getFontTitle(entry.slug);
+            modalFontSlug.textContent = entry.slug;
+
+            modalInputText.value = state.globalText;
+            modalInputSize.value = state.globalSize;
+            modalSizeVal.textContent = `${state.globalSize}px`;
+
+            // Reset modal styles
+            modalPreviewRender.textContent = state.globalText;
+            modalPreviewRender.style.fontSize = `${state.globalSize}px`;
+            modalPreviewRender.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+
+            // Check if variable font
+            const vFamily = entry.families.find(f => f.weight_range !== null);
+            if (vFamily) {
+                modalWeightSliderGroup.classList.remove("hidden");
+                const [wMin, wMax] = vFamily.weight_range;
+                modalInputWeight.min = wMin;
+                modalInputWeight.max = wMax;
+                let defaultWeight = 400;
+                if (defaultWeight < wMin) defaultWeight = wMin;
+                if (defaultWeight > wMax) defaultWeight = wMax;
+                modalInputWeight.value = defaultWeight;
+                modalWeightVal.textContent = defaultWeight;
+                modalPreviewRender.style.fontWeight = defaultWeight;
+
+                if (vFamily.stretch_range) {
+                    modalStretchSliderGroup.classList.remove("hidden");
+                    const [sMinRaw, sMaxRaw] = vFamily.stretch_range;
+                    const sMin = parseFloat(sMinRaw);
+                    const sMax = parseFloat(sMaxRaw);
+                    modalInputStretch.min = sMin;
+                    modalInputStretch.max = sMax;
+                    modalInputStretch.value = 100;
+                    modalStretchVal.textContent = "100%";
+                    modalPreviewRender.style.fontStretch = "100%";
+                } else {
+                    modalStretchSliderGroup.classList.add("hidden");
+                    modalPreviewRender.style.fontStretch = "";
+                }
+            } else {
+                modalWeightSliderGroup.classList.add("hidden");
+                modalStretchSliderGroup.classList.add("hidden");
+                modalPreviewRender.style.fontWeight = "400";
+                modalPreviewRender.style.fontStretch = "";
+            }
+
+            // Stylistic Sets
+            const baseClass = entry.classes.find(c => c.is_base && c.font_family === entry.families[0].family);
+            modalFeaturesCheckboxes.innerHTML = "";
+            if (baseClass) {
+                const subFeatures = entry.classes.filter(c => !c.is_base && c.class.startsWith(baseClass.class) && c.class !== baseClass.class);
+                if (subFeatures.length > 0) {
+                    modalFeaturesGroup.classList.remove("hidden");
+                    modalFeaturesPreview.textContent = state.globalText;
+                    modalFeaturesPreview.style.fontSize = `${state.globalSize}px`;
+                    modalFeaturesPreview.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+
+                    subFeatures.forEach(feat => {
+                        const label = document.createElement("label");
+                        label.className = "inline-flex items-center gap-2 cursor-pointer text-xs bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg hover:border-brand-500";
+                        label.innerHTML = `
+                            <input type="checkbox" class="accent-brand-500 cursor-pointer">
+                            <span class="font-mono text-slate-300">.${feat.class}</span>
+                        `;
+                        const cb = label.querySelector("input");
+                        cb.addEventListener("change", () => {
+                            modalFeaturesPreview.classList.toggle(feat.class, cb.checked);
+                        });
+                        modalFeaturesCheckboxes.appendChild(label);
+                    });
+                } else {
+                    modalFeaturesGroup.classList.add("hidden");
+                }
+            } else {
+                modalFeaturesGroup.classList.add("hidden");
+            }
+
+            // Weight step previews
+            modalWeightsList.innerHTML = "";
+            entry.families.forEach(fam => {
+                const famTitle = document.createElement("div");
+                famTitle.className = "text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-2 font-mono mt-3";
+                famTitle.textContent = fam.family;
+                modalWeightsList.appendChild(famTitle);
+
+                if (fam.weights) {
+                    fam.weights.forEach(w => {
+                        const row = document.createElement("div");
+                        row.className = "border-b border-slate-800/40 py-2.5 flex items-center justify-between gap-4 flex-wrap";
+                        row.innerHTML = `
+                            <span class="text-xs font-mono text-slate-500 w-24">weight: ${w}</span>
+                            <div class="sample-display flex-grow text-slate-100 font-fa" style="font-family: '${fam.family}', sans-serif; font-weight: ${w}; font-size: 22px;">
+                                ${state.globalText}
+                            </div>
+                        `;
+                        modalWeightsList.appendChild(row);
+                    });
+                } else if (fam.weight_range) {
+                    const row = document.createElement("div");
+                    row.className = "border-b border-slate-800/40 py-2.5 flex items-center justify-between gap-4 flex-wrap";
+                    row.innerHTML = `
+                        <span class="text-xs font-mono text-slate-500 w-24">range: ${fam.weight_range[0]}-${fam.weight_range[1]}</span>
+                        <div class="sample-display flex-grow text-slate-100 font-fa" style="font-family: '${fam.family}', sans-serif; font-weight: 400; font-size: 22px;">
+                            ${state.globalText}
+                        </div>
+                    `;
+                    modalWeightsList.appendChild(row);
+                }
+            });
+
+            // Update code snippets
+            updateModalDocumentation(entry);
+
+            // Open modal animation
+            fontModal.classList.remove("opacity-0", "pointer-events-none");
+            fontModal.querySelector(".relative").classList.remove("scale-95");
+            fontModal.querySelector(".relative").classList.add("scale-100");
+        }
+
+        // Close Modal
+        function closeFontModal() {
+            fontModal.classList.add("opacity-0", "pointer-events-none");
+            fontModal.querySelector(".relative").classList.remove("scale-100");
+            fontModal.querySelector(".relative").classList.add("scale-95");
+            state.activeFont = null;
+        }
+
+        modalClose.addEventListener("click", closeFontModal);
+        fontModal.addEventListener("click", (e) => {
+            if (e.target === fontModal) closeFontModal();
+        });
+
+        // Toggle Modal install commands subtabs
+        window.toggleModalInstallTab = function (tabId) {
+            state.activeModalInstallTab = tabId;
+            document.querySelectorAll(".modal-code-block").forEach(b => b.classList.add("hidden"));
+            document.getElementById(`code-${tabId}`).classList.remove("hidden");
+
+            const managers = ['pnpm', 'npm', 'yarn', 'bun'];
+            managers.forEach(m => {
+                const btn = document.getElementById(`btn-modal-${m}`);
+                if (`modal-${m}` === tabId) {
+                    btn.className = "px-3 py-1.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400";
+                } else {
+                    btn.className = "px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200";
+                }
+            });
+        };
+
+        window.copyModalInstallCommand = async function () {
+            const commandText = document.querySelector(`.modal-code-block:not(.hidden)`).textContent;
+            await navigator.clipboard.writeText(commandText);
+        };
+
+        // Toggle Modal configurations subtabs
+        window.toggleModalConfigTab = function (tabId) {
+            state.activeModalConfigTab = tabId;
+            document.querySelectorAll(".modal-config-block").forEach(b => b.classList.add("hidden"));
+            document.getElementById(`code-${tabId}`).classList.remove("hidden");
+
+            const configs = ['v4', 'v3', 'css'];
+            configs.forEach(c => {
+                const btn = document.getElementById(`btn-config-${c}`);
+                if (`config-${c}` === tabId) {
+                    btn.className = "px-3 py-1.5 text-xs font-bold border-b-2 border-brand-500 text-brand-400";
+                } else {
+                    btn.className = "px-3 py-1.5 text-xs font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200";
+                }
+            });
+        };
+
+        window.copyConfigCode = async function (elId) {
+            const codeText = document.getElementById(elId).textContent;
+            await navigator.clipboard.writeText(codeText);
+        };
+
+        // Dynamically build documentation blocks for modal
+        function updateModalDocumentation(entry) {
+            const slug = entry.slug;
+
+            // Build code blocks based on active manager
+            const managers = ['pnpm', 'npm', 'yarn', 'bun'];
+            managers.forEach(m => {
+                const codeDiv = document.getElementById(`code-modal-${m}`);
+                let dlCommand = '';
+                if (m === 'pnpm') dlCommand = `pnpm dlx joys-fonts add ${slug}`;
+                if (m === 'npm') dlCommand = `npx joys-fonts add ${slug}`;
+                if (m === 'yarn') dlCommand = `yarn dlx joys-fonts add ${slug}`;
+                if (m === 'bun') dlCommand = `bunx joys-fonts add ${slug}`;
+                codeDiv.textContent = dlCommand;
+            });
+
+            // Tailwind CSS v4 Code Block
+            const themeVariables = entry.classes
+                .filter(c => c.font_family && c.class.startsWith('font-'))
+                .map(c => `--font-${c.class.substring(5)}: "${c.font_family}", sans-serif;`)
+                .join('\n  ');
+
+            document.getElementById("text-config-v4").textContent =
+                `@import "./fonts/${slug}/${slug}.css";
+
+@theme {
+  ${themeVariables}
+}`;
+
+            // Tailwind CSS v3 Code Block
+            const configExtendLines = entry.classes
+                .filter(c => c.font_family && c.class.startsWith('font-'))
+                .map(c => `'${c.class.substring(5)}': ['${c.font_family}', 'sans-serif'],`)
+                .join('\n      ');
+
+            document.getElementById("text-config-v3").textContent =
+                `// 1. Import font stylesheet in your global CSS:
+@import "./fonts/${slug}/${slug}.css";
+
+// 2. Extend config in tailwind.config.js:
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        ${configExtendLines}
+      }
+    }
+  }
+};`;
+
+            // Plain CSS Code Block
+            document.getElementById("text-config-css").textContent =
+                `@import "./fonts/${slug}/${slug}.css";`;
+        }
+
+        // Live slider updates inside modal
+        modalInputSize.addEventListener("input", () => {
+            const size = modalInputSize.value;
+            modalSizeVal.textContent = `${size}px`;
+            modalPreviewRender.style.fontSize = `${size}px`;
+            if (modalFeaturesPreview) modalFeaturesPreview.style.fontSize = `${size}px`;
+        });
+
+        modalInputWeight.addEventListener("input", () => {
+            const w = modalInputWeight.value;
+            modalWeightVal.textContent = w;
+            modalPreviewRender.style.fontWeight = w;
+        });
+
+        modalInputStretch.addEventListener("input", () => {
+            const s = modalInputStretch.value;
+            modalStretchVal.textContent = `${s}%`;
+            modalPreviewRender.style.fontStretch = `${s}%`;
+        });
+
+        modalInputText.addEventListener("input", () => {
+            const val = modalInputText.value || " ";
+            modalPreviewRender.textContent = val;
+            if (modalFeaturesPreview) modalFeaturesPreview.textContent = val;
+
+            // Sync with weight steps preview rows
+            const previews = modalWeightsList.querySelectorAll('.sample-display');
+            previews.forEach(p => p.textContent = val);
+        });
+
+        // Build grid font cards (Compact card format)
+        function createFontCard(entry) {
+            loadFontStylesheet(entry.css);
+
+            const card = document.createElement("article");
+            card.className = "relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/30 p-6 hover:border-brand-500/40 hover:bg-slate-900/50 hover:shadow-lg hover:shadow-brand-500/5 hover:-translate-y-1 transition duration-300 cursor-pointer flex flex-col justify-between h-72";
+            card.dataset.search = (entry.slug + " " + entry.families.map(f => f.family).join(" ")).toLowerCase();
+
+            // Store references to update in real time
+            const textDisplay = document.createElement("div");
+            textDisplay.className = "sample-display flex-grow text-slate-100 font-fa self-end py-4";
+            textDisplay.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+            textDisplay.style.fontSize = `${state.globalSize}px`;
+            textDisplay.textContent = state.globalText;
+
+            card.updatePreview = (text, size) => {
+                textDisplay.textContent = text;
+                textDisplay.style.fontSize = `${size}px`;
+            };
+
+            const header = document.createElement("div");
+            header.className = "flex items-start justify-between w-full border-b border-slate-800/40 pb-3";
+
+            const titleWrap = document.createElement("div");
+            titleWrap.className = "flex flex-col gap-0.5";
+            const h2 = document.createElement("h2");
+            h2.className = "text-md font-bold text-slate-200";
+            h2.textContent = getFontTitle(entry.slug);
+            const slug = document.createElement("span");
+            slug.className = "font-mono text-[10px] text-slate-500";
+            slug.textContent = entry.slug;
+            titleWrap.appendChild(h2);
+            titleWrap.appendChild(slug);
+
+            const typeBadge = document.createElement("span");
+            typeBadge.className = isVariableFont(entry)
+                ? "bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] px-2 py-0.5 rounded-md font-semibold"
+                : "bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] px-2 py-0.5 rounded-md font-semibold";
+            typeBadge.textContent = isVariableFont(entry) ? "Variable" : "Static";
+
+            header.appendChild(titleWrap);
+            header.appendChild(typeBadge);
+            card.appendChild(header);
+
+            card.appendChild(textDisplay);
+
+            const footer = document.createElement("div");
+            footer.className = "flex items-center justify-between w-full border-t border-slate-800/40 pt-3 text-[11px] text-slate-500";
+            const variantsText = document.createElement("span");
+            variantsText.textContent = `${entry.families.length} family ${entry.families.length > 1 ? 'variants' : 'variant'}`;
+
+            const actionBtn = document.createElement("span");
+            actionBtn.className = "text-brand-400 hover:text-brand-300 font-bold flex items-center gap-1";
+            actionBtn.innerHTML = `Specimen & Install <span>→</span>`;
+
+            footer.appendChild(variantsText);
+            footer.appendChild(actionBtn);
+            card.appendChild(footer);
+
+            // Open modal on click
+            card.addEventListener("click", () => openFontModal(entry));
+
+            return card;
+        }
+
+        // Render card catalog
+        function render(list) {
+            appRoot.innerHTML = "";
+            if (list.length === 0) {
+                appRoot.innerHTML = `
+                    <div class="col-span-full text-center py-16 bg-slate-900/20 border border-dashed border-slate-800 rounded-2xl text-slate-500">
+                        No fonts found matching the criteria.
+                    </div>
+                `;
+                return;
+            }
+            list.forEach(entry => {
+                const card = createFontCard(entry);
+                appRoot.appendChild(card);
+            });
+        }
+
+        // Apply filters (search + category)
+        function applyFilters() {
+            const filtered = state.manifest.filter(entry => {
+                const matchesSearch = (entry.slug + " " + entry.families.map(f => f.family).join(" ")).toLowerCase().includes(state.searchQuery);
+                let matchesCategory = true;
+                if (state.filterType === 'variable') {
+                    matchesCategory = isVariableFont(entry);
+                } else if (state.filterType === 'static') {
+                    matchesCategory = !isVariableFont(entry);
+                }
+                return matchesSearch && matchesCategory;
+            });
+            render(filtered);
+        }
+
+        // Setup filter tab toggles
+        function setupFilterButton(btnId, type) {
+            const btn = document.getElementById(btnId);
+            btn.addEventListener("click", () => {
+                state.filterType = type;
+                ['all', 'variable', 'static'].forEach(t => {
+                    const b = document.getElementById(`filter-${t}`);
+                    if (t === type) {
+                        b.className = "px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition";
+                    } else {
+                        b.className = "px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition";
+                    }
+                });
+                applyFilters();
+            });
+        }
+
+        setupFilterButton('filter-all', 'all');
+        setupFilterButton('filter-variable', 'variable');
+        setupFilterButton('filter-static', 'static');
+
+        // Global sliders and search event listeners
+        customTextEl.addEventListener("input", () => {
+            state.globalText = customTextEl.value || " ";
+            const cards = appRoot.querySelectorAll('article');
+            cards.forEach(card => {
+                if (card.updatePreview) {
+                    card.updatePreview(state.globalText, state.globalSize);
+                }
+            });
+        });
+
+        globalSizeEl.addEventListener("input", () => {
+            state.globalSize = parseInt(globalSizeEl.value, 10);
+            globalSizeVal.textContent = `${state.globalSize}px`;
+            const cards = appRoot.querySelectorAll('article');
+            cards.forEach(card => {
+                if (card.updatePreview) {
+                    card.updatePreview(state.globalText, state.globalSize);
+                }
+            });
+        });
+
+        searchInput.addEventListener("input", () => {
+            state.searchQuery = searchInput.value.trim().toLowerCase();
+            applyFilters();
+        });
+
+        // Initialize application database
+        async function init() {
+            try {
+                const res = await fetch("./fonts.manifest.json");
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                state.manifest = await res.json();
+            } catch (err) {
+                statusText.textContent = "Error loading manifest";
+                appRoot.innerHTML = `
+                    <div class="col-span-full text-center py-16 bg-red-500/5 border border-dashed border-red-500/20 rounded-2xl text-red-400">
+                        Error reading fonts.manifest.json. Run "node generate-manifest.js" first.
+                    </div>
+                `;
+                return;
+            }
+
+            if (!state.manifest.length) {
+                statusText.textContent = "No fonts found";
+                return;
+            }
+
+            statusText.textContent = `${state.manifest.length} fonts ready`;
+            render(state.manifest);
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

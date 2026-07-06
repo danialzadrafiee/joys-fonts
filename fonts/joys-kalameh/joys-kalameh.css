@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalameh';
+    src: url('./woff2/joys-kalameh-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehFaNum';
+    src: url('./woff2/joys-kalameh-fanum-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-100.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JoysKalamehNoEn';
+    src: url('./woff2/joys-kalameh-noen-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+.font-kalameh {
+    font-family: 'JoysKalameh', sans-serif;
+    font-weight: 400;
+}
+.font-kalameh-fanum {
+    font-family: 'JoysKalamehFaNum', sans-serif;
+    font-weight: 400;
+}
+.font-kalameh-noen {
+    font-family: 'JoysKalamehNoEn', sans-serif;
+    font-weight: 400;
+}

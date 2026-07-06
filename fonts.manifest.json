@@ -1,0 +1,608 @@
+[
+  {
+    "slug": "joys-iran-sans-x",
+    "css": "fonts/joys-iran-sans-x/joys-iran-sans-x.css",
+    "families": [
+      {
+        "family": "JoysIranSansX",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-900.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysIranSansXFaNum",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-fanum-900.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysIranSansXNoEn",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-iran-sans-x/woff2/joys-iran-sans-x-noen-900.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-iran-sans-x",
+        "font_family": "JoysIranSansX",
+        "is_base": true
+      },
+      {
+        "class": "font-iran-sans-x-fanum",
+        "font_family": "JoysIranSansXFaNum",
+        "is_base": true
+      },
+      {
+        "class": "font-iran-sans-x-noen",
+        "font_family": "JoysIranSansXNoEn",
+        "is_base": true
+      }
+    ]
+  },
+  {
+    "slug": "joys-iran-yekan-x",
+    "css": "fonts/joys-iran-yekan-x/joys-iran-yekan-x.css",
+    "families": [
+      {
+        "family": "JoysIranYekanX",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          950,
+          1000
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-900.woff2"
+          },
+          {
+            "weight": "950",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-950.woff2"
+          },
+          {
+            "weight": "1000",
+            "url": "fonts/joys-iran-yekan-x/woff2/joys-iran-yekan-x-1000.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-iran-yekan-x",
+        "font_family": "JoysIranYekanX",
+        "is_base": true
+      }
+    ]
+  },
+  {
+    "slug": "joys-kalameh",
+    "css": "fonts/joys-kalameh/joys-kalameh.css",
+    "families": [
+      {
+        "family": "JoysKalameh",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-900.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysKalamehFaNum",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-fanum-900.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysKalamehNoEn",
+        "weights": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "100",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-100.woff2"
+          },
+          {
+            "weight": "200",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-kalameh/woff2/joys-kalameh-noen-900.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-kalameh",
+        "font_family": "JoysKalameh",
+        "is_base": true
+      },
+      {
+        "class": "font-kalameh-fanum",
+        "font_family": "JoysKalamehFaNum",
+        "is_base": true
+      },
+      {
+        "class": "font-kalameh-noen",
+        "font_family": "JoysKalamehNoEn",
+        "is_base": true
+      }
+    ]
+  },
+  {
+    "slug": "joys-morabba",
+    "css": "fonts/joys-morabba/joys-morabba.css",
+    "families": [
+      {
+        "family": "JoysMorabba",
+        "weights": [
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          950
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "200",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-200.woff2"
+          },
+          {
+            "weight": "300",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-500.woff2"
+          },
+          {
+            "weight": "600",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-600.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-900.woff2"
+          },
+          {
+            "weight": "950",
+            "url": "fonts/joys-morabba/woff2/joys-morabba-950.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-morabba",
+        "font_family": "JoysMorabba",
+        "is_base": true
+      },
+      {
+        "class": "font-morabba-fa-numerals",
+        "font_family": null,
+        "is_base": false
+      },
+      {
+        "class": "font-morabba-tabular-numerals",
+        "font_family": null,
+        "is_base": false
+      }
+    ]
+  },
+  {
+    "slug": "joys-yekan-bakh",
+    "css": "fonts/joys-yekan-bakh/joys-yekan-bakh.css",
+    "families": [
+      {
+        "family": "JoysYekanBakh",
+        "weights": null,
+        "weight_range": [
+          100,
+          950
+        ],
+        "stretch_range": [
+          "62.5%",
+          "150%"
+        ],
+        "files": [
+          {
+            "weight": "100 950",
+            "url": "fonts/joys-yekan-bakh/woff2/joys-yekan-bakh-vf.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysYekanBakhFaNum",
+        "weights": null,
+        "weight_range": [
+          100,
+          950
+        ],
+        "stretch_range": [
+          "62.5%",
+          "150%"
+        ],
+        "files": [
+          {
+            "weight": "100 950",
+            "url": "fonts/joys-yekan-bakh/woff2/joys-yekan-bakh-fanum-vf.woff2"
+          }
+        ]
+      },
+      {
+        "family": "JoysYekanBakhNoEn",
+        "weights": null,
+        "weight_range": [
+          100,
+          950
+        ],
+        "stretch_range": [
+          "62.5%",
+          "150%"
+        ],
+        "files": [
+          {
+            "weight": "100 950",
+            "url": "fonts/joys-yekan-bakh/woff2/joys-yekan-bakh-noen-vf.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-yekan-bakh",
+        "font_family": "JoysYekanBakh",
+        "is_base": true
+      },
+      {
+        "class": "font-yekan-bakh-fanum",
+        "font_family": "JoysYekanBakhFaNum",
+        "is_base": true
+      },
+      {
+        "class": "font-yekan-bakh-noen",
+        "font_family": "JoysYekanBakhNoEn",
+        "is_base": true
+      },
+      {
+        "class": "font-yekan-bakh--dots-alt",
+        "font_family": null,
+        "is_base": false
+      }
+    ]
+  }
+]

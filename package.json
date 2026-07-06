@@ -1,0 +1,33 @@
+{
+  "name": "joys-fonts",
+  "version": "0.1.0",
+  "description": "Persian web fonts installer for Tailwind CSS projects",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "bin": {
+    "joys-fonts": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node test/cli.test.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "fonts",
+    "fonts.manifest.json"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "fonts",
+    "persian",
+    "tailwind",
+    "tailwindcss",
+    "installer",
+    "cli"
+  ],
+  "author": "joys",
+  "license": "MIT"
+}
