@@ -154,8 +154,124 @@ function main() {
   }
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(manifest, null, 2), 'utf8');
-
   console.log(`✅ ${OUTPUT_FILE} generated successfully — ${manifest.length} fonts identified.`);
+
+  // Generate llm.txt contents
+  let llmText = `# Joys Fonts
+
+Joys Fonts is a modern Persian and English web fonts repository and CLI installer specifically optimized for Tailwind CSS (targeting Tailwind CSS v4+).
+Instead of manual setups or installing bloated dependencies, it offers a lightweight CLI utility and static CSS/WOFF2 font assets ready for direct consumption.
+
+- Main Catalog: https://danialzadrafiee.github.io/joys-fonts/
+- Manifest File: https://danialzadrafiee.github.io/joys-fonts/fonts.manifest.json
+
+---
+
+## Installation & Usage
+
+You do not need to install this package. You can run the installer CLI in the root of your project using any JavaScript package manager:
+
+\`\`\`bash
+# Using npm
+npx joys-fonts add <font-slug>
+
+# Using pnpm
+pnpm dlx joys-fonts add <font-slug>
+
+# Using yarn
+yarn dlx joys-fonts add <font-slug>
+
+# Using bun
+bunx joys-fonts add <font-slug>
+\`\`\`
+
+### CLI Options
+
+\`\`\`bash
+npx joys-fonts add <font-slug> [options]
+\`\`\`
+
+- \`-d, --dest <path>\`: Specify directory where font files should be copied (default: \`./src/fonts/<font-slug>\`).
+- \`-c, --css <path>\`: Specify project's global/Tailwind CSS stylesheet to update (e.g. \`src/index.css\`).
+- \`-y, --yes\`: Auto-confirm all prompts with default settings (recommended for non-interactive/AI agent use).
+
+---
+
+## How It Works (For AI Agents)
+
+When you run \`npx joys-fonts add <font-slug> -y\`, the CLI:
+1. Copies the WOFF2 files and its stylesheet to the target project (e.g., \`./src/fonts/<font-slug>\`).
+2. Injects the stylesheet \`@import\` at the top of your global CSS:
+   \`\`\`css
+   @import "./fonts/<font-slug>/<font-slug>.css";
+   \`\`\`
+3. Updates the Tailwind CSS v4 \`@theme\` block in the global CSS to register the font family utility variables:
+   \`\`\`css
+   @theme {
+     --font-<variable-name>: "<FontFamily>", sans-serif;
+   }
+   \`\`\`
+
+---
+
+## Direct CDN & URL Access
+
+If you prefer to manually import the fonts or download them without using the CLI, all stylesheet files are hosted on GitHub Pages:
+
+\`\`\`css
+/* Example of direct web import */
+@import url("https://danialzadrafiee.github.io/joys-fonts/fonts/<font-slug>/<font-slug>.css");
+\`\`\`
+
+For tailwind theme mapping or raw CSS rules, refer to the available fonts listing below.
+
+---
+
+## Available Fonts Reference
+
+Here is the complete catalog of available fonts. Pass the **Slug** to the CLI:
+
+`;
+
+  for (const font of manifest) {
+    llmText += `### ${font.slug} (${font.group} font)\n\n`;
+    llmText += `- **Slug**: \`${font.slug}\`\n`;
+    llmText += `- **Group**: \`${font.group}\`\n`;
+    llmText += `- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/${font.css}\n`;
+    
+    llmText += `- **Font Families**:\n`;
+    for (const family of font.families) {
+      const weightsStr = family.weights ? family.weights.join(', ') : (family.weight_range ? `${family.weight_range[0]}-${family.weight_range[1]} (Variable)` : 'N/A');
+      llmText += `  - \`${family.family}\` (Weights: ${weightsStr})\n`;
+    }
+    
+    if (font.classes && font.classes.length > 0) {
+      llmText += `- **Tailwind Utility Classes (after installation)**:\n`;
+      for (const cls of font.classes) {
+        llmText += `  - \`${cls.class}\` -> maps to \`font-family: "${cls.font_family}"\` ${cls.is_base ? '(Primary)' : ''}\n`;
+      }
+    }
+    llmText += `\n---\n\n`;
+  }
+
+  llmText += `
+## Instructions for AI Agents / LLMs
+
+If a user asks you to install a font from Joys Fonts in their project:
+1. Locate the correct font **Slug** from the list of available fonts above.
+2. Identify the global CSS stylesheet of the project (usually \`src/index.css\`, \`src/app.css\`, \`app/globals.css\`, or \`styles.css\`).
+3. Run the installer CLI using the appropriate package manager (preferring the one used in the project, e.g. \`pnpm\`, \`npm\`):
+   \`\`\`bash
+   pnpm dlx joys-fonts add <font-slug> --css <path-to-css> -y
+   \`\`\`
+   *(Tip: Use \`-y\` to skip interactive prompts).*
+4. Once completed, use the corresponding Tailwind CSS utility class (e.g. \`font-iran-sans-x\`) in the elements/components as requested.
+5. If the project does not use Tailwind CSS v4+, you can still run the CLI to download the assets, and manually add the font family to their Tailwind v3 configuration or raw CSS.
+`;
+
+  fs.writeFileSync('llm.txt', llmText, 'utf8');
+  console.log('✅ llm.txt generated successfully.');
+
   if (skipped.length > 0) {
     console.log(`⚠️  Skipped (no CSS file found, not ready yet): ${skipped.join(', ')}`);
   }

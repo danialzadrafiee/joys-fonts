@@ -1,0 +1,186 @@
+# Joys Fonts
+
+Joys Fonts is a modern Persian and English web fonts repository and CLI installer specifically optimized for Tailwind CSS (targeting Tailwind CSS v4+).
+Instead of manual setups or installing bloated dependencies, it offers a lightweight CLI utility and static CSS/WOFF2 font assets ready for direct consumption.
+
+- Main Catalog: https://danialzadrafiee.github.io/joys-fonts/
+- Manifest File: https://danialzadrafiee.github.io/joys-fonts/fonts.manifest.json
+
+---
+
+## Installation & Usage
+
+You do not need to install this package. You can run the installer CLI in the root of your project using any JavaScript package manager:
+
+```bash
+# Using npm
+npx joys-fonts add <font-slug>
+
+# Using pnpm
+pnpm dlx joys-fonts add <font-slug>
+
+# Using yarn
+yarn dlx joys-fonts add <font-slug>
+
+# Using bun
+bunx joys-fonts add <font-slug>
+```
+
+### CLI Options
+
+```bash
+npx joys-fonts add <font-slug> [options]
+```
+
+- `-d, --dest <path>`: Specify directory where font files should be copied (default: `./src/fonts/<font-slug>`).
+- `-c, --css <path>`: Specify project's global/Tailwind CSS stylesheet to update (e.g. `src/index.css`).
+- `-y, --yes`: Auto-confirm all prompts with default settings (recommended for non-interactive/AI agent use).
+
+---
+
+## How It Works (For AI Agents)
+
+When you run `npx joys-fonts add <font-slug> -y`, the CLI:
+1. Copies the WOFF2 files and its stylesheet to the target project (e.g., `./src/fonts/<font-slug>`).
+2. Injects the stylesheet `@import` at the top of your global CSS:
+   ```css
+   @import "./fonts/<font-slug>/<font-slug>.css";
+   ```
+3. Updates the Tailwind CSS v4 `@theme` block in the global CSS to register the font family utility variables:
+   ```css
+   @theme {
+     --font-<variable-name>: "<FontFamily>", sans-serif;
+   }
+   ```
+
+---
+
+## Direct CDN & URL Access
+
+If you prefer to manually import the fonts or download them without using the CLI, all stylesheet files are hosted on GitHub Pages:
+
+```css
+/* Example of direct web import */
+@import url("https://danialzadrafiee.github.io/joys-fonts/fonts/<font-slug>/<font-slug>.css");
+```
+
+For tailwind theme mapping or raw CSS rules, refer to the available fonts listing below.
+
+---
+
+## Available Fonts Reference
+
+Here is the complete catalog of available fonts. Pass the **Slug** to the CLI:
+
+### joys-inter (english font)
+
+- **Slug**: `joys-inter`
+- **Group**: `english`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-inter/joys-inter.css
+- **Font Families**:
+  - `JoysInter` (Weights: 300, 400, 500, 600, 700, 800)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-inter` -> maps to `font-family: "JoysInter"` (Primary)
+
+---
+
+### joys-iran-sans-x (persian font)
+
+- **Slug**: `joys-iran-sans-x`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-iran-sans-x/joys-iran-sans-x.css
+- **Font Families**:
+  - `JoysIranSansX` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+  - `JoysIranSansXFaNum` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+  - `JoysIranSansXNoEn` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-iran-sans-x` -> maps to `font-family: "JoysIranSansX"` (Primary)
+  - `font-iran-sans-x-fanum` -> maps to `font-family: "JoysIranSansXFaNum"` (Primary)
+  - `font-iran-sans-x-noen` -> maps to `font-family: "JoysIranSansXNoEn"` (Primary)
+
+---
+
+### joys-iran-yekan-x (persian font)
+
+- **Slug**: `joys-iran-yekan-x`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-iran-yekan-x/joys-iran-yekan-x.css
+- **Font Families**:
+  - `JoysIranYekanX` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-iran-yekan-x` -> maps to `font-family: "JoysIranYekanX"` (Primary)
+
+---
+
+### joys-kalameh (persian font)
+
+- **Slug**: `joys-kalameh`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-kalameh/joys-kalameh.css
+- **Font Families**:
+  - `JoysKalameh` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+  - `JoysKalamehFaNum` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+  - `JoysKalamehNoEn` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-kalameh` -> maps to `font-family: "JoysKalameh"` (Primary)
+  - `font-kalameh-fanum` -> maps to `font-family: "JoysKalamehFaNum"` (Primary)
+  - `font-kalameh-noen` -> maps to `font-family: "JoysKalamehNoEn"` (Primary)
+
+---
+
+### joys-morabba (persian font)
+
+- **Slug**: `joys-morabba`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-morabba/joys-morabba.css
+- **Font Families**:
+  - `JoysMorabba` (Weights: 200, 300, 400, 500, 600, 700, 800, 900, 950)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-morabba` -> maps to `font-family: "JoysMorabba"` (Primary)
+  - `font-morabba-fa-numerals` -> maps to `font-family: "null"` 
+  - `font-morabba-tabular-numerals` -> maps to `font-family: "null"` 
+
+---
+
+### joys-vazir (persian font)
+
+- **Slug**: `joys-vazir`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-vazir/joys-vazir.css
+- **Font Families**:
+  - `JoysVazir` (Weights: 100, 200, 300, 400, 500, 600, 700, 800, 900)
+- **Tailwind Utility Classes (after installation)**:
+  - `font-vazir` -> maps to `font-family: "JoysVazir"` (Primary)
+
+---
+
+### joys-yekan-bakh (persian font)
+
+- **Slug**: `joys-yekan-bakh`
+- **Group**: `persian`
+- **Direct CSS URL**: https://danialzadrafiee.github.io/joys-fonts/fonts/joys-yekan-bakh/joys-yekan-bakh.css
+- **Font Families**:
+  - `JoysYekanBakh` (Weights: 100-950 (Variable))
+  - `JoysYekanBakhFaNum` (Weights: 100-950 (Variable))
+  - `JoysYekanBakhNoEn` (Weights: 100-950 (Variable))
+- **Tailwind Utility Classes (after installation)**:
+  - `font-yekan-bakh` -> maps to `font-family: "JoysYekanBakh"` (Primary)
+  - `font-yekan-bakh-fanum` -> maps to `font-family: "JoysYekanBakhFaNum"` (Primary)
+  - `font-yekan-bakh-noen` -> maps to `font-family: "JoysYekanBakhNoEn"` (Primary)
+  - `font-yekan-bakh--dots-alt` -> maps to `font-family: "null"` 
+
+---
+
+
+## Instructions for AI Agents / LLMs
+
+If a user asks you to install a font from Joys Fonts in their project:
+1. Locate the correct font **Slug** from the list of available fonts above.
+2. Identify the global CSS stylesheet of the project (usually `src/index.css`, `src/app.css`, `app/globals.css`, or `styles.css`).
+3. Run the installer CLI using the appropriate package manager (preferring the one used in the project, e.g. `pnpm`, `npm`):
+   ```bash
+   pnpm dlx joys-fonts add <font-slug> --css <path-to-css> -y
+   ```
+   *(Tip: Use `-y` to skip interactive prompts).*
+4. Once completed, use the corresponding Tailwind CSS utility class (e.g. `font-iran-sans-x`) in the elements/components as requested.
+5. If the project does not use Tailwind CSS v4+, you can still run the CLI to download the assets, and manually add the font family to their Tailwind v3 configuration or raw CSS.
