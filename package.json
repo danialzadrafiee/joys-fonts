@@ -9,7 +9,9 @@
     "joys-fonts": "bin/cli.js"
   },
   "scripts": {
-    "test": "node test/cli.test.js"
+    "build": "node generate-manifest.js",
+    "test": "node test/cli.test.js",
+    "deploy": "npm run build && git diff --quiet fonts.manifest.json || (git add fonts.manifest.json && git commit -m \"chore: regenerate fonts manifest\") && git push"
   },
   "files": [
     "bin",

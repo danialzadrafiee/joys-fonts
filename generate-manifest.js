@@ -139,7 +139,8 @@ function main() {
       'joys-iran-yekan-x',
       'joys-kalameh',
       'joys-morabba',
-      'joys-yekan-bakh'
+      'joys-yekan-bakh',
+      'joys-vazir'
     ];
     const group = PERSIAN_SLUGS.includes(slug) ? 'persian' : 'english';
 
