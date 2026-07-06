@@ -569,14 +569,19 @@
             modalFontTitle.textContent = getFontTitle(entry.slug);
             modalFontSlug.textContent = entry.slug;
 
-            modalInputText.value = state.globalText;
+            modalInputTextFa.value = state.globalTextFa;
+            modalInputTextEn.value = state.globalTextEn;
             modalInputSize.value = state.globalSize;
             modalSizeVal.textContent = `${state.globalSize}px`;
 
             // Reset modal styles
-            modalPreviewRender.textContent = state.globalText;
-            modalPreviewRender.style.fontSize = `${state.globalSize}px`;
-            modalPreviewRender.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+            modalPreviewRenderFa.textContent = state.globalTextFa;
+            modalPreviewRenderFa.style.fontSize = `${state.globalSize}px`;
+            modalPreviewRenderFa.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+
+            modalPreviewRenderEn.textContent = state.globalTextEn;
+            modalPreviewRenderEn.style.fontSize = `${state.globalSize * 0.85}px`;
+            modalPreviewRenderEn.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
 
             // Check if variable font
             const vFamily = entry.families.find(f => f.weight_range !== null);
@@ -590,7 +595,8 @@
                 if (defaultWeight > wMax) defaultWeight = wMax;
                 modalInputWeight.value = defaultWeight;
                 modalWeightVal.textContent = defaultWeight;
-                modalPreviewRender.style.fontWeight = defaultWeight;
+                modalPreviewRenderFa.style.fontWeight = defaultWeight;
+                modalPreviewRenderEn.style.fontWeight = defaultWeight;
 
                 if (vFamily.stretch_range) {
                     modalStretchSliderGroup.classList.remove("hidden");
@@ -601,16 +607,20 @@
                     modalInputStretch.max = sMax;
                     modalInputStretch.value = 100;
                     modalStretchVal.textContent = "100%";
-                    modalPreviewRender.style.fontStretch = "100%";
+                    modalPreviewRenderFa.style.fontStretch = "100%";
+                    modalPreviewRenderEn.style.fontStretch = "100%";
                 } else {
                     modalStretchSliderGroup.classList.add("hidden");
-                    modalPreviewRender.style.fontStretch = "";
+                    modalPreviewRenderFa.style.fontStretch = "";
+                    modalPreviewRenderEn.style.fontStretch = "";
                 }
             } else {
                 modalWeightSliderGroup.classList.add("hidden");
                 modalStretchSliderGroup.classList.add("hidden");
-                modalPreviewRender.style.fontWeight = "400";
-                modalPreviewRender.style.fontStretch = "";
+                modalPreviewRenderFa.style.fontWeight = "400";
+                modalPreviewRenderFa.style.fontStretch = "";
+                modalPreviewRenderEn.style.fontWeight = "400";
+                modalPreviewRenderEn.style.fontStretch = "";
             }
 
             // Stylistic Sets
@@ -620,9 +630,14 @@
                 const subFeatures = entry.classes.filter(c => !c.is_base && c.class.startsWith(baseClass.class) && c.class !== baseClass.class);
                 if (subFeatures.length > 0) {
                     modalFeaturesGroup.classList.remove("hidden");
-                    modalFeaturesPreview.textContent = state.globalText;
-                    modalFeaturesPreview.style.fontSize = `${state.globalSize}px`;
-                    modalFeaturesPreview.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+                    
+                    modalFeaturesPreviewFa.textContent = state.globalTextFa;
+                    modalFeaturesPreviewFa.style.fontSize = `${state.globalSize}px`;
+                    modalFeaturesPreviewFa.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
+
+                    modalFeaturesPreviewEn.textContent = state.globalTextEn;
+                    modalFeaturesPreviewEn.style.fontSize = `${state.globalSize * 0.85}px`;
+                    modalFeaturesPreviewEn.style.fontFamily = `'${entry.families[0].family}', sans-serif`;
 
                     subFeatures.forEach(feat => {
                         const label = document.createElement("label");
@@ -633,7 +648,8 @@
                         `;
                         const cb = label.querySelector("input");
                         cb.addEventListener("change", () => {
-                            modalFeaturesPreview.classList.toggle(feat.class, cb.checked);
+                            modalFeaturesPreviewFa.classList.toggle(feat.class, cb.checked);
+                            modalFeaturesPreviewEn.classList.toggle(feat.class, cb.checked);
                         });
                         modalFeaturesCheckboxes.appendChild(label);
                     });
@@ -655,22 +671,32 @@
                 if (fam.weights) {
                     fam.weights.forEach(w => {
                         const row = document.createElement("div");
-                        row.className = "border-b border-slate-800/40 py-2.5 flex items-center justify-between gap-4 flex-wrap";
+                        row.className = "border-b border-slate-800/40 py-3.5 flex items-center justify-between gap-4 flex-wrap";
                         row.innerHTML = `
                             <span class="text-xs font-mono text-slate-500 w-24">weight: ${w}</span>
-                            <div class="sample-display flex-grow text-slate-100 font-fa" style="font-family: '${fam.family}', sans-serif; font-weight: ${w}; font-size: 22px;">
-                                ${state.globalText}
+                            <div class="flex-grow flex flex-col gap-2">
+                                <div class="sample-display text-slate-100 font-fa text-right" style="font-family: '${fam.family}', sans-serif; font-weight: ${w}; font-size: 22px;" dir="rtl">
+                                    ${state.globalTextFa}
+                                </div>
+                                <div class="sample-display text-slate-400 font-sans text-left" style="font-family: '${fam.family}', sans-serif; font-weight: ${w}; font-size: 18px;" dir="ltr">
+                                    ${state.globalTextEn}
+                                </div>
                             </div>
                         `;
                         modalWeightsList.appendChild(row);
                     });
                 } else if (fam.weight_range) {
                     const row = document.createElement("div");
-                    row.className = "border-b border-slate-800/40 py-2.5 flex items-center justify-between gap-4 flex-wrap";
+                    row.className = "border-b border-slate-800/40 py-3.5 flex items-center justify-between gap-4 flex-wrap";
                     row.innerHTML = `
                         <span class="text-xs font-mono text-slate-500 w-24">range: ${fam.weight_range[0]}-${fam.weight_range[1]}</span>
-                        <div class="sample-display flex-grow text-slate-100 font-fa" style="font-family: '${fam.family}', sans-serif; font-weight: 400; font-size: 22px;">
-                            ${state.globalText}
+                        <div class="flex-grow flex flex-col gap-2">
+                            <div class="sample-display text-slate-100 font-fa text-right" style="font-family: '${fam.family}', sans-serif; font-weight: 400; font-size: 22px;" dir="rtl">
+                                ${state.globalTextFa}
+                            </div>
+                            <div class="sample-display text-slate-400 font-sans text-left" style="font-family: '${fam.family}', sans-serif; font-weight: 400; font-size: 18px;" dir="ltr">
+                                ${state.globalTextEn}
+                            </div>
                         </div>
                     `;
                     modalWeightsList.appendChild(row);
@@ -802,30 +828,42 @@ module.exports = {
         modalInputSize.addEventListener("input", () => {
             const size = modalInputSize.value;
             modalSizeVal.textContent = `${size}px`;
-            modalPreviewRender.style.fontSize = `${size}px`;
-            if (modalFeaturesPreview) modalFeaturesPreview.style.fontSize = `${size}px`;
+            modalPreviewRenderFa.style.fontSize = `${size}px`;
+            modalPreviewRenderEn.style.fontSize = `${size * 0.85}px`;
+            if (modalFeaturesPreviewFa) modalFeaturesPreviewFa.style.fontSize = `${size}px`;
+            if (modalFeaturesPreviewEn) modalFeaturesPreviewEn.style.fontSize = `${size * 0.85}px`;
         });
 
         modalInputWeight.addEventListener("input", () => {
             const w = modalInputWeight.value;
             modalWeightVal.textContent = w;
-            modalPreviewRender.style.fontWeight = w;
+            modalPreviewRenderFa.style.fontWeight = w;
+            modalPreviewRenderEn.style.fontWeight = w;
         });
 
         modalInputStretch.addEventListener("input", () => {
             const s = modalInputStretch.value;
             modalStretchVal.textContent = `${s}%`;
-            modalPreviewRender.style.fontStretch = `${s}%`;
+            modalPreviewRenderFa.style.fontStretch = `${s}%`;
+            modalPreviewRenderEn.style.fontStretch = `${s}%`;
         });
 
-        modalInputText.addEventListener("input", () => {
-            const val = modalInputText.value || " ";
-            modalPreviewRender.textContent = val;
-            if (modalFeaturesPreview) modalFeaturesPreview.textContent = val;
+        modalInputTextFa.addEventListener("input", () => {
+            const val = modalInputTextFa.value || " ";
+            modalPreviewRenderFa.textContent = val;
+            if (modalFeaturesPreviewFa) modalFeaturesPreviewFa.textContent = val;
 
-            // Sync with weight steps preview rows
-            const previews = modalWeightsList.querySelectorAll('.sample-display');
-            previews.forEach(p => p.textContent = val);
+            const rows = modalWeightsList.querySelectorAll('.sample-display[dir="rtl"]');
+            rows.forEach(r => r.textContent = val);
+        });
+
+        modalInputTextEn.addEventListener("input", () => {
+            const val = modalInputTextEn.value || " ";
+            modalPreviewRenderEn.textContent = val;
+            if (modalFeaturesPreviewEn) modalFeaturesPreviewEn.textContent = val;
+
+            const rows = modalWeightsList.querySelectorAll('.sample-display[dir="ltr"]');
+            rows.forEach(r => r.textContent = val);
         });
 
         // Build grid font cards (Compact card format)
@@ -926,7 +964,7 @@ module.exports = {
             });
         }
 
-        // Apply filters (search + category)
+        // Apply filters (search + category + group)
         function applyFilters() {
             const filtered = state.manifest.filter(entry => {
                 const matchesSearch = (entry.slug + " " + entry.families.map(f => f.family).join(" ")).toLowerCase().includes(state.searchQuery);
@@ -936,7 +974,11 @@ module.exports = {
                 } else if (state.filterType === 'static') {
                     matchesCategory = !isVariableFont(entry);
                 }
-                return matchesSearch && matchesCategory;
+                let matchesGroup = true;
+                if (state.filterGroup !== 'all') {
+                    matchesGroup = entry.group === state.filterGroup;
+                }
+                return matchesSearch && matchesCategory && matchesGroup;
             });
             render(filtered);
         }
@@ -962,13 +1004,44 @@ module.exports = {
         setupFilterButton('filter-variable', 'variable');
         setupFilterButton('filter-static', 'static');
 
+        // Setup group tab toggles
+        function setupGroupButton(btnId, group) {
+            const btn = document.getElementById(btnId);
+            btn.addEventListener("click", () => {
+                state.filterGroup = group;
+                ['all', 'persian', 'english'].forEach(g => {
+                    const b = document.getElementById(`group-${g}`);
+                    if (g === group) {
+                        b.className = "px-4 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-100 shadow-sm transition";
+                    } else {
+                        b.className = "px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-400 hover:text-slate-200 transition";
+                    }
+                });
+                applyFilters();
+            });
+        }
+
+        setupGroupButton('group-all', 'all');
+        setupGroupButton('group-persian', 'persian');
+        setupGroupButton('group-english', 'english');
+
         // Global sliders and search event listeners
-        customTextEl.addEventListener("input", () => {
-            state.globalText = customTextEl.value || " ";
+        customTextFaEl.addEventListener("input", () => {
+            state.globalTextFa = customTextFaEl.value || " ";
             const cards = appRoot.querySelectorAll('article');
             cards.forEach(card => {
                 if (card.updatePreview) {
-                    card.updatePreview(state.globalText, state.globalSize);
+                    card.updatePreview(state.globalTextFa, state.globalTextEn, state.globalSize);
+                }
+            });
+        });
+
+        customTextEnEl.addEventListener("input", () => {
+            state.globalTextEn = customTextEnEl.value || " ";
+            const cards = appRoot.querySelectorAll('article');
+            cards.forEach(card => {
+                if (card.updatePreview) {
+                    card.updatePreview(state.globalTextFa, state.globalTextEn, state.globalSize);
                 }
             });
         });
@@ -979,7 +1052,7 @@ module.exports = {
             const cards = appRoot.querySelectorAll('article');
             cards.forEach(card => {
                 if (card.updatePreview) {
-                    card.updatePreview(state.globalText, state.globalSize);
+                    card.updatePreview(state.globalTextFa, state.globalTextEn, state.globalSize);
                 }
             });
         });
