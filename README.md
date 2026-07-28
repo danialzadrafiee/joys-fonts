@@ -92,6 +92,7 @@ The following fonts are packaged and available for installation:
 - `joys-iran-yekan-x`
 - `joys-kalameh`
 - `joys-morabba`
+- `joys-tahrir`
 - `joys-vazir`
 - `joys-yekan-bakh`
 <!-- FONTS_END -->

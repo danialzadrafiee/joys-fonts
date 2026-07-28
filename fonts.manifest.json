@@ -581,6 +581,59 @@
     ]
   },
   {
+    "slug": "joys-tahrir",
+    "group": "persian",
+    "css": "fonts/joys-tahrir/joys-tahrir.css",
+    "families": [
+      {
+        "family": "JoysTahrir",
+        "weights": [
+          300,
+          400,
+          500,
+          700,
+          800,
+          900
+        ],
+        "weight_range": null,
+        "stretch_range": null,
+        "files": [
+          {
+            "weight": "300",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-300.woff2"
+          },
+          {
+            "weight": "400",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-400.woff2"
+          },
+          {
+            "weight": "500",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-500.woff2"
+          },
+          {
+            "weight": "700",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-700.woff2"
+          },
+          {
+            "weight": "800",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-800.woff2"
+          },
+          {
+            "weight": "900",
+            "url": "fonts/joys-tahrir/woff2/joys-tahrir-900.woff2"
+          }
+        ]
+      }
+    ],
+    "classes": [
+      {
+        "class": "font-tahrir",
+        "font_family": "JoysTahrir",
+        "is_base": true
+      }
+    ]
+  },
+  {
     "slug": "joys-vazir",
     "group": "persian",
     "css": "fonts/joys-vazir/joys-vazir.css",

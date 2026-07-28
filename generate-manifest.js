@@ -139,6 +139,7 @@ function main() {
       'joys-iran-yekan-x',
       'joys-kalameh',
       'joys-morabba',
+      'joys-tahrir',
       'joys-yekan-bakh',
       'joys-vazir'
     ];

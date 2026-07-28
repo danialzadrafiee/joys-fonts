@@ -76,6 +76,7 @@ Pass the **Slug** to the CLI:
 | `joys-iran-yekan-x` | `persian` | `font-iran-yekan-x` | - |
 | `joys-kalameh` | `persian` | `font-kalameh` | `font-kalameh-fanum`, `font-kalameh-noen` |
 | `joys-morabba` | `persian` | `font-morabba` | `font-morabba-fa-numerals`, `font-morabba-tabular-numerals` |
+| `joys-tahrir` | `persian` | `font-tahrir` | - |
 | `joys-vazir` | `persian` | `font-vazir` | - |
 | `joys-yekan-bakh` | `persian` | `font-yekan-bakh` | `font-yekan-bakh-fanum`, `font-yekan-bakh-noen`, `font-yekan-bakh--dots-alt` |
 
