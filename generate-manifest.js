@@ -174,22 +174,22 @@ You do not need to install this package. You can run the installer CLI in the ro
 
 \`\`\`bash
 # Using npm
-npx joys-fonts add <font-slug>
+npx joys-fonts@latest add <font-slug>
 
 # Using pnpm
-pnpm dlx joys-fonts add <font-slug>
+pnpm dlx joys-fonts@latest add <font-slug>
 
 # Using yarn
-yarn dlx joys-fonts add <font-slug>
+yarn dlx joys-fonts@latest add <font-slug>
 
 # Using bun
-bunx joys-fonts add <font-slug>
+bunx joys-fonts@latest add <font-slug>
 \`\`\`
 
 ### CLI Options
 
 \`\`\`bash
-npx joys-fonts add <font-slug> [options]
+npx joys-fonts@latest add <font-slug> [options]
 \`\`\`
 
 - \`-d, --dest <path>\`: Specify directory where font files should be copied (default: \`./src/fonts/<font-slug>\`).
@@ -200,7 +200,7 @@ npx joys-fonts add <font-slug> [options]
 
 ## How It Works (For AI Agents)
 
-When you run \`npx joys-fonts add <font-slug> -y\`, the CLI:
+When you run \`npx joys-fonts@latest add <font-slug> -y\`, the CLI:
 1. Copies the WOFF2 files and its stylesheet to the target project (e.g., \`./src/fonts/<font-slug>\`).
 2. Injects the stylesheet \`@import\` at the top of your global CSS:
    \`\`\`css
@@ -254,7 +254,7 @@ If a user asks you to install a font from Joys Fonts in their project:
 2. Identify the global CSS stylesheet of the project (usually \`src/index.css\`, \`src/app.css\`, \`app/globals.css\`, or \`styles.css\`).
 3. Run the installer CLI using the appropriate package manager (preferring the one used in the project, e.g. \`pnpm\`, \`npm\`):
    \`\`\`bash
-   pnpm dlx joys-fonts add <font-slug> --css <path-to-css> -y
+   pnpm dlx joys-fonts@latest add <font-slug> --css <path-to-css> -y
    \`\`\`
    *(Tip: Use \`-y\` to skip interactive prompts).*
 4. Once completed, use the corresponding Tailwind CSS utility class (e.g. \`font-iran-sans-x\`) in the elements/components as requested.

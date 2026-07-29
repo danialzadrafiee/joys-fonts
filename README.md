@@ -21,28 +21,28 @@ You don't need to install this package. You can run the installer CLI in the roo
 
 ### npm
 ```bash
-npx joys-fonts add <font-slug>
+npx joys-fonts@latest add <font-slug>
 ```
 
 ### pnpm
 ```bash
-pnpm dlx joys-fonts add <font-slug>
+pnpm dlx joys-fonts@latest add <font-slug>
 ```
 
 ### yarn
 ```bash
-yarn dlx joys-fonts add <font-slug>
+yarn dlx joys-fonts@latest add <font-slug>
 ```
 
 ### bun
 ```bash
-bunx joys-fonts add <font-slug>
+bunx joys-fonts@latest add <font-slug>
 ```
 
 For example, to install the `joys-iran-sans-x` font using pnpm:
 
 ```bash
-pnpm dlx joys-fonts add joys-iran-sans-x
+pnpm dlx joys-fonts@latest add joys-iran-sans-x
 ```
 
 ### Options
@@ -50,7 +50,7 @@ pnpm dlx joys-fonts add joys-iran-sans-x
 The CLI can be run non-interactively using options for automation and CI/CD:
 
 ```bash
-npx joys-fonts add <font-slug> [options]
+npx joys-fonts@latest add <font-slug> [options]
 ```
 
 - `-d, --dest <path>`: Specify the directory where the font files should be copied.
